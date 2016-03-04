@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class KQueens - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>bin/kqueens.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="Object.html">Object</a>
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-check_solution">#check_solution</a>
+    
+    <li ><a href="#method-i-check_violations">#check_violations</a>
+    
+    <li ><a href="#method-i-choose_queen">#choose_queen</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./KQueens.html">KQueens</a>
+  
+    <li><a href="./MinConflicts.html">MinConflicts</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class KQueens</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-board" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">board</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-m" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">m</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(m)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Constructor of the class <a href="KQueens.html">KQueens</a>. This
+constructor creates a board with one queen in every row and every  column.</p>
+<dl class="rdoc-list note-list"><dt><code>m</code>
+<dd>
+<p>Dimensions of the board.</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File bin/kqueens.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">m</span>)
+  <span class="ruby-ivar">@m</span> = <span class="ruby-identifier">m</span>
+  <span class="ruby-ivar">@board</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">m</span>){<span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">m</span>){<span class="ruby-value">0</span>}}
+  <span class="ruby-identifier">filled_columns</span> = []
+  <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">valid</span>
+      <span class="ruby-identifier">empty_column</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">row</span>.<span class="ruby-identifier">length</span>)
+      <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">filled_columns</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">empty_column</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">filled_columns</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">empty_column</span>
+    <span class="ruby-identifier">row</span>[<span class="ruby-identifier">empty_column</span>] = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-check_solution" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_solution</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Check if the current board is the solution. Loop all the queens checking if
+there is any queen have violations. If there  is any violation the method
+returns false otherwise return true.</p>
+<dl class="rdoc-list note-list"><dt><code>return</code>
+<dd>
+<p>true/false.</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="check_solution-source">
+            <pre><span class="ruby-comment"># File bin/kqueens.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_solution</span>
+  <span class="ruby-identifier">violations</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span>, <span class="ruby-identifier">row_index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">row</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span>, <span class="ruby-identifier">column_index</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">check_violations</span>([<span class="ruby-identifier">row_index</span>, <span class="ruby-identifier">column_index</span>]) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">row_index</span>][<span class="ruby-identifier">column_index</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">violations</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- check_solution-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- check_solution-method -->
+
+    
+      <div id="method-i-check_violations" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_violations</span><span
+            class="method-args">(position)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Check the violations of a given queen. Given a position of a queen this
+method loops column, row and all the  diagonals finding another queen. If a
+queen is found +1 is added to  violations counter.</p>
+<dl class="rdoc-list note-list"><dt><code>position</code>
+<dd>
+<p>Array with the row and column of a given queen.</p>
+</dd></dl>
+
+<pre>0 --&gt; row
+1 --&gt; column</pre>
+<dl class="rdoc-list note-list"><dt><code>return</code>
+<dd>
+<p>Number of violations.</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="check_violations-source">
+            <pre><span class="ruby-comment"># File bin/kqueens.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_violations</span>(<span class="ruby-identifier">position</span>)
+
+  <span class="ruby-identifier">violations</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">row</span> = <span class="ruby-identifier">position</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">column</span> = <span class="ruby-identifier">position</span>[<span class="ruby-value">1</span>]
+  
+  <span class="ruby-comment"># Vertical column</span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">column</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">row</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Horitzontal row </span>
+  <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">i</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">column</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Second quadrant</span>
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y</span>][<span class="ruby-identifier">x</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>     
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Forth quadrant</span>
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y</span>][<span class="ruby-identifier">x</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>      
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># First quadrant</span>
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">row</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y</span>][<span class="ruby-identifier">x</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Third quadrant</span>
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">row</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">column</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">row</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">violations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">y</span>][<span class="ruby-identifier">x</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">x</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">violations</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- check_violations-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- check_violations-method -->
+
+    
+      <div id="method-i-choose_queen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">choose_queen</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Loops all the board randomly until a queen is found.</p>
+<dl class="rdoc-list note-list"><dt><code>return</code>
+<dd>
+<p>Array with the position of the founded queen.</p>
+</dd></dl>
+          
+          
+
+          
+          <div class="method-source-code" id="choose_queen-source">
+            <pre><span class="ruby-comment"># File bin/kqueens.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">choose_queen</span>
+  <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span><span class="ruby-identifier">valid</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@m</span>)
+    <span class="ruby-identifier">column</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@m</span>)
+    <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@board</span>[<span class="ruby-identifier">row</span>][<span class="ruby-identifier">column</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> [<span class="ruby-identifier">row</span>, <span class="ruby-identifier">column</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- choose_queen-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- choose_queen-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>This method overrides the method to string. It prints all the rows of the 
+matrix.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File bin/kqueens.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-ivar">@board</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{row}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_s-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_s-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

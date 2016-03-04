@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Board</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./board_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="board.rb">board.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-acceptance_function">#acceptance_function</a></li>
+          
+          <li><a href="#method-i-generate_neighbour">#generate_neighbour</a></li>
+          
+          <li><a href="#method-i-generate_random_solution">#generate_random_solution</a></li>
+          
+          <li><a href="#method-i-get_formated">#get_formated</a></li>
+          
+          <li><a href="#method-i-move">#move</a></li>
+          
+          <li><a href="#method-i-objective_function">#objective_function</a></li>
+          
+          <li><a href="#method-i-solve">#solve</a></li>
+          
+          <li><a href="#method-i-validate_solution">#validate_solution</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Board.html">Board</a></li>
+        
+          <li><a href="./Position.html">Position</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Board</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(m, n, start, final, w, d)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Constructor method with all the instance variables defined.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">m</span>, <span class="ruby-identifier">n</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">final</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">d</span>)
+  <span class="ruby-ivar">@m</span> = <span class="ruby-identifier">m</span>
+  <span class="ruby-ivar">@n</span> = <span class="ruby-identifier">n</span>
+  <span class="ruby-ivar">@start</span> = <span class="ruby-identifier">start</span>
+  <span class="ruby-ivar">@final</span> = <span class="ruby-identifier">final</span>
+  <span class="ruby-ivar">@w</span> = <span class="ruby-identifier">w</span>
+  <span class="ruby-ivar">@d</span> = <span class="ruby-identifier">d</span>
+  <span class="ruby-ivar">@num_moves</span> = <span class="ruby-identifier">m</span> * <span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="acceptance_function-method" class="method-detail ">
+          <a name="method-i-acceptance_function"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">acceptance_function</span><span
+              class="method-args">(energy, energy2, temperature)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return a value based on the.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>energy</tt></p></td>
+<td>
+<p>Energy of the first solution.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>energy2</tt></p></td>
+<td>
+<p>Energy of the second solution.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>temperature</tt></p></td>
+<td>
+<p>Actual temperature of the system.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="acceptance_function-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">acceptance_function</span>(<span class="ruby-identifier">energy</span>, <span class="ruby-identifier">energy2</span>, <span class="ruby-identifier">temperature</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">exp</span>(<span class="ruby-identifier">energy</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">energy2</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">temperature</span>) 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- acceptance_function-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- acceptance_function-method -->
+
+      
+        <div id="generate_neighbour-method" class="method-detail ">
+          <a name="method-i-generate_neighbour"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_neighbour</span><span
+              class="method-args">(solution)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Generate a neighbour of the parameter solution. It works generating a
+random  number between 0..solution.length this number choose the index to
+change. Another  random number between 0..3 changing the movement.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>solution</tt></p></td>
+<td>
+<p>Vector with integers between 0..3 indicates the problem</p>
+</td></tr></table>
+
+<p>solution at the moment.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>returns</tt></p></td>
+<td>
+<p>Solution randomly changed.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="generate_neighbour-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_neighbour</span>(<span class="ruby-identifier">solution</span>)
+  <span class="ruby-identifier">new_solution</span> = <span class="ruby-identifier">solution</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">solution</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_solution</span>
+    <span class="ruby-identifier">new_solution</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">solution</span>.<span class="ruby-identifier">length</span>)] = <span class="ruby-identifier">rand</span>(<span class="ruby-value">4</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_solution</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_neighbour-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_neighbour-method -->
+
+      
+        <div id="generate_random_solution-method" class="method-detail ">
+          <a name="method-i-generate_random_solution"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_random_solution</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="generate_random_solution-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_random_solution</span>
+  <span class="ruby-identifier">attempt</span> = []
+  <span class="ruby-ivar">@num_moves</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">attempt</span>[<span class="ruby-identifier">n</span>] = <span class="ruby-identifier">rand</span>(<span class="ruby-value">4</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">attempt</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_random_solution-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_random_solution-method -->
+
+      
+        <div id="get_formated-method" class="method-detail ">
+          <a name="method-i-get_formated"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_formated</span><span
+              class="method-args">(array)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return an array formated for correct visualization of the movements.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>array</tt></p></td>
+<td>
+<p>Array of undefined lenght.</p>
+</td></tr><tr><td class="rdoc-term"><p><tt>return</tt></p></td>
+<td>
+<p>Well formated string.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="get_formated-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_formated</span>(<span class="ruby-identifier">array</span>)
+  <span class="ruby-identifier">array_string</span> = <span class="ruby-string">&quot;[&quot;</span>                                                                                                                          
+  <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span><span class="ruby-operator">|</span>                                                                                                                                
+    <span class="ruby-identifier">array_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; #{cell}&quot;</span>                                                                                                                         
+  <span class="ruby-keyword">end</span>                                                                                                                                                  
+  <span class="ruby-identifier">array_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot; ]&quot;</span>                                                                                                                                 
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">array_string</span>                                                                                                                                  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_formated-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_formated-method -->
+
+      
+        <div id="move-method" class="method-detail ">
+          <a name="method-i-move"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">move</span><span
+              class="method-args">(mov, pos)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns the position on the board of the applyed movement.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>movement</tt></p></td>
+<td>
+<p>Integer between 0..3 that indicates the movement</p>
+</td></tr></table>
+<ul><li>
+<p>0 -&gt; North</p>
+</li><li>
+<p>1 -&gt; South</p>
+</li><li>
+<p>2 -&gt; East</p>
+</li><li>
+<p>3 -&gt; West</p>
+</li></ul>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>returns</tt></p></td>
+<td>
+<p><a href="Position.html">Position</a> with the movement applyed.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="move-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 106</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">move</span>(<span class="ruby-identifier">mov</span>, <span class="ruby-identifier">pos</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">mov</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+    <span class="ruby-constant">Position</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+    <span class="ruby-constant">Position</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@m</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+    <span class="ruby-constant">Position</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">3</span>
+    <span class="ruby-constant">Position</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">y</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- move-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- move-method -->
+
+      
+        <div id="objective_function-method" class="method-detail ">
+          <a name="method-i-objective_function"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">objective_function</span><span
+              class="method-args">(solution)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This function calculates the performance of the solution that we pass as a 
+parameter. We generate a matrix of M x N dimensions with an offset in all
+positions  except for start and final positions. This is for giving them
+more weight on  the performance calculations. Then we loop across all the
+movements of the solution knowing our position  in the performance matrix.
+We increase the values of the matrix with the  following rules: Straight
+line = D Curve = D + W Repeated position = 50 * (D + W) This rules
+determine the beheviour of the algorithm. We can change the  values to
+change the behaviour.</p>
+            
+
+            
+            <div class="method-source-code" id="objective_function-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">objective_function</span>(<span class="ruby-identifier">solution</span>)
+  <span class="ruby-identifier">offset</span> = <span class="ruby-value">5</span>
+  <span class="ruby-identifier">actual_position</span> = <span class="ruby-ivar">@start</span>.<span class="ruby-identifier">dup</span>
+
+  <span class="ruby-identifier">performance</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@m</span>) { <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@n</span>) { <span class="ruby-identifier">offset</span> } }
+  <span class="ruby-identifier">performance</span>[<span class="ruby-ivar">@start</span>.<span class="ruby-identifier">x</span>][<span class="ruby-ivar">@start</span>.<span class="ruby-identifier">y</span>] = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">performance</span>[<span class="ruby-ivar">@final</span>.<span class="ruby-identifier">x</span>][<span class="ruby-ivar">@final</span>.<span class="ruby-identifier">y</span>] = <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">solution</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movement</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">position</span> = <span class="ruby-identifier">move</span>(<span class="ruby-identifier">movement</span>, <span class="ruby-identifier">actual_position</span>)
+    <span class="ruby-identifier">performance</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">y</span>][<span class="ruby-identifier">position</span>.<span class="ruby-identifier">x</span>] <span class="ruby-operator">+=</span> <span class="ruby-ivar">@d</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">solution</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">solution</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">performance</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">y</span>][<span class="ruby-identifier">position</span>.<span class="ruby-identifier">x</span>] <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@d</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@w</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">solution</span>[<span class="ruby-identifier">index</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">solution</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">performance</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">y</span>][<span class="ruby-identifier">position</span>.<span class="ruby-identifier">x</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">50</span> * (<span class="ruby-ivar">@d</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@w</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">performance</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">x</span>][<span class="ruby-identifier">position</span>.<span class="ruby-identifier">y</span>] <span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@d</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@w</span>) 
+    <span class="ruby-identifier">actual_position</span> = <span class="ruby-identifier">position</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">total_performance</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">performance</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">y</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">total_performance</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">x</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">total_performance</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- objective_function-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- objective_function-method -->
+
+      
+        <div id="solve-method" class="method-detail ">
+          <a name="method-i-solve"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">solve</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="solve-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">solve</span>
+ 
+  <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">false</span> 
+
+  <span class="ruby-comment"># Set initial temp and cooling_rate</span>
+  <span class="ruby-identifier">temp</span> = <span class="ruby-value">10000</span>
+  <span class="ruby-identifier">cooling_rate</span> = <span class="ruby-value">0.02</span>
+
+  <span class="ruby-comment"># Initialize first solution</span>
+  <span class="ruby-identifier">start_solution</span> = []
+  <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">valid</span>
+    <span class="ruby-identifier">start_solution</span> = <span class="ruby-identifier">generate_random_solution</span>
+    <span class="ruby-identifier">valid</span> = <span class="ruby-identifier">validate_solution</span>(<span class="ruby-identifier">start_solution</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Set as current best</span>
+  <span class="ruby-identifier">best_solution</span> = <span class="ruby-identifier">start_solution</span>
+
+  <span class="ruby-comment"># Loop until the system was cooled</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">temp</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+    
+    <span class="ruby-comment"># Create a valid neighbour</span>
+    <span class="ruby-identifier">valid</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">valid</span>
+      <span class="ruby-identifier">neighbour</span> = <span class="ruby-identifier">generate_neighbour</span>(<span class="ruby-identifier">best_solution</span>)
+      <span class="ruby-identifier">valid</span> = <span class="ruby-identifier">validate_solution</span>(<span class="ruby-identifier">neighbour</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Get the energy of the solutions</span>
+    <span class="ruby-identifier">current_energy</span> = <span class="ruby-identifier">objective_function</span>(<span class="ruby-identifier">best_solution</span>)
+    <span class="ruby-identifier">neighbour_energy</span> = <span class="ruby-identifier">objective_function</span>(<span class="ruby-identifier">neighbour</span>)
+
+    <span class="ruby-comment"># Decide if we should accept the neighbour</span>
+    <span class="ruby-identifier">current_solution</span> = <span class="ruby-identifier">neighbour</span> <span class="ruby-keyword">if</span>(<span class="ruby-identifier">acceptance_function</span>(<span class="ruby-identifier">current_energy</span>, <span class="ruby-identifier">neighbour_energy</span>, <span class="ruby-identifier">temp</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">rand</span>())
+      
+    <span class="ruby-comment"># Keep track of the best solution found</span>
+    <span class="ruby-identifier">best_solution</span> = <span class="ruby-identifier">current_solution</span> <span class="ruby-keyword">if</span>(<span class="ruby-identifier">neighbour_energy</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">current_energy</span>)
+
+    <span class="ruby-comment"># Cool the system</span>
+    <span class="ruby-identifier">temp</span> <span class="ruby-operator">*=</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cooling_rate</span>      
+
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;SOLUTION: #{best_solution}&quot;</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- solve-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- solve-method -->
+
+      
+        <div id="validate_solution-method" class="method-detail ">
+          <a name="method-i-validate_solution"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">validate_solution</span><span
+              class="method-args">(solution)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>We check if the solution is innbound. We start with the index zero and we
+do  all the movements if move function returns a nil then the move_count
+will be  different than the movement lenght at the end and we will know
+that some  movement is not correct.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>solution</tt></p></td>
+<td>
+<p>Vector with integers between 0..3 indicates the problem</p>
+</td></tr></table>
+
+<p>solution at the moment.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p><tt>return</tt></p></td>
+<td>
+<p>true if the solution is innbound or false if not.</p>
+</td></tr></table>
+            
+
+            
+            <div class="method-source-code" id="validate_solution-source">
+<pre>
+<span class="ruby-comment"># File board.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">validate_solution</span>(<span class="ruby-identifier">solution</span>)
+  <span class="ruby-identifier">position</span> = <span class="ruby-ivar">@start</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">move_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">solution</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movement</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">next_position</span> = <span class="ruby-identifier">move</span>(<span class="ruby-identifier">movement</span>, <span class="ruby-identifier">position</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">next_position</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">position</span> = <span class="ruby-identifier">next_position</span>
+      <span class="ruby-identifier">move_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> 
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">move_count</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@num_moves</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- validate_solution-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- validate_solution-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
